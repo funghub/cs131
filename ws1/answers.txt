@@ -1,0 +1,12 @@
+T1: cd ~/cs131/ws1 && pwd
+T2: ls ../data
+T3: file ../logs/app01.log ../.env
+T4: ls -alhr
+T5: ls -lS logs/
+T6: 1048576,ishigaki-cs7,Jun  8 10:46
+T7: ls data/Data?.csv
+T8: ls [[:upper:]]*
+T9: ls BACKUP.[0-9][0-9][0-9]
+T10: cp -r data backup
+T11: mv data/readme.txt data/README.txt
+T12: rm -ri backup/data

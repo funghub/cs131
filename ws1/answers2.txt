@@ -1,0 +1,14 @@
+B1: grep '"city":"Santa Barbara"' /data/yelp/yelp_academic_dataset_business.json
+B2: grep -c '"state":"CA"' /data/yelp/yelp_academic_dataset_business.json
+B3: grep -i 'worth' /data/yelp/yelp_academic_dataset_review.json
+B4: grep -E '(Coffee)|(Caf[ée])' /data/yelp/yelp_academic_dataset_business.json
+B5: grep -E '"stars":(4\.5|5\.0)' /data/yelp/yelp_academic_dataset_business.json
+B6: grep '"stars":5,' /data/yelp/yelp_academic_dataset_review.json
+B7: grep -E '[[:alnum:]_]+@[[:alnum:]\._]+\.[[:alpha:]]{2,}' /data/yelp/yelp_academic_dataset_review.json
+B8: grep -E '[[:digit:]]{3}-[[:digit:]]{3}-[[:digit:]]{4}' /data/yelp/yelp_academic_dataset_review.json
+B9: grep -E '"name":"P' /data/yelp/yelp_academic_dataset_business.json
+B10: grep -ic 'pizza' /data/yelp/yelp_academic_dataset_review.json
+B11: grep -n 'service' /data/yelp/yelp_academic_dataset_review.json
+B12: grep -v 'Restaurants' /data/yelp/yelp_academic_dataset_review.jso
+B13: retrieve lines of all businesses in CA, retrieve number of yelp review for those businesses along with the label name, retrieve only those numbers, sort those numbers in descending order and print the first 3 numbers
+B14: grep '"city":"Santa Barbara"' /data/yelp/yelp_academic_dataset_business.json | grep -oE '"name":"[^"]*"' | grep -oE ':"[^"]*' | grep -oE '[^:"]*' | sort

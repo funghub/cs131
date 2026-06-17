@@ -1,0 +1,27 @@
+Q1: echo "task: practice git" >> notes.md && git add notes.md && git commit -m "ws2: add task line"
+Q2: git log -3
+Q3: 40bbd67
+Q4: git revert 40bbd67
+Q5: git rm --cached bigdata.bin
+Q5: echo "ws2/bigdata.bin" >> .gitignore
+Q5: git add ../.gitignore
+Q5: git commit --amend
+Q5: git push
+Q6: git checkout -b feature-summary
+Q7: echo -e 'hello\npeople' > summary.md
+Q7: git add summary.md
+Q7: git commit -m "new branch"
+Q8: git diff main...feature-summary
+Q9: git checkout main
+Q9: git merge feature-summary
+Q9: ls | grep summary.md
+Q10: git branch -d feature-summary
+Q11: git merge conflict-branch
+Q11: ws2/summary.md reported as conflicted
+Q12: git status
+Q13: vi summary.md
+Q14: git add summary.md
+Q14: git commit
+Q15: git fetch origin
+Q15: git log HEAD..origin/main --oneline
+Q16: git fetch downloads the changes from the remote server in GitHub without merging, but git pull downloads the changes like git fetch and merges those changes with my local branch.

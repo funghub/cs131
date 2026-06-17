@@ -1,0 +1,6 @@
+total 8
+-rw-rw-r-- 1 ishigaki-cs7 ishigaki-cs7   0 Jun 17 09:32 answers.txt
+-rw-rw-r-- 1 ishigaki-cs7 ishigaki-cs7  45 Jun 17 09:33 fruits.txt
+-rw-rw-r-- 1 ishigaki-cs7 ishigaki-cs7   0 Jun 17 09:35 listing.txt
+-rw-rw-r-- 1 ishigaki-cs7 ishigaki-cs7 102 Jun 17 09:33 server.log
+Wed Jun 17 09:35:01 AM PDT 2026

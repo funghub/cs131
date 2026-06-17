@@ -1,0 +1,24 @@
+umask is for default file permissions
+File
+  666
+- 002
+= 664
+--> owner rw, group rw, others
+
+mask is basically subtracting because mask
+
+should get rw rw r as a result
+
+
+Dir
+
+  777
+- 002
+= 775
+
+--> owner rwx, group rwx, other rx
+
+
+chmod 644
+001
+00??

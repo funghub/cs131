@@ -14,4 +14,4 @@ B2:
 B3: 
 B4: chmod 000 secret.txt
 B5: chmod 640 fruits.txt
-B6: find . -type -f -user $(whoami) -perm-u=w
+B6: find . -type -f -user $(whoami) -perm -u=w

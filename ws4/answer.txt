@@ -1,0 +1,43 @@
+T1:
+https://gist.github.com/zachbrowne/8bc414c9f30192067831fafebd14255c#file-the-ultimate-bad-ass-bashrc-file-L268
+
+ftext ()
+
+This function searches for a pattern passed as an argument to the function in the current directory. The implementation of this function is through the grep command searching recursively while ignoring case and binary files and through the less command to display the results in the terminal with color. The grep command is implemented to print the filenames and the line numbers for each match.
+
+
+
+https://gist.github.com/zachbrowne/8bc414c9f30192067831fafebd14255c#file-the-ultimate-bad-ass-bashrc-file-L302
+
+cpg ()
+
+This function copies a file into a specified directory and goes to that directory. It works by having two conditions in which the first if condition tests whether the second variable ($2) entered is a directory (-d) and if it is, it will copy the file entered as the first variable ($1) to that directory ($2). Then that first condtion will follow up by changing the current directory to that specified in $2. Otherwise, the second else condition will only copy the file entered as the first variable ($1) to the file entered as the second variable ($2).
+
+
+T2:
+https://github.com/funghub/cs131/blob/main/ws4/.bashrc#L15
+
+gofile () {
+
+This is a shell function to change the current directory to a path specified by the user as the first argument. A user can specify in the second argument the depth level to display the subsequent paths from that directory. If no arguments are entered, the function would show the subsequent paths 1 level deep (similar to the ls -al function).
+
+
+https://github.com/funghub/cs131/blob/main/ws4/.bashrc#L16
+
+if [[ -n "$1" && -e "$1" ]]; then
+
+This is an if-statement of the gofile function to check if the first argument is a string longer than 0 and if that path entered is an existing file. The proceeding command after would change the directory to that path entered for $1.
+
+
+https://github.com/funghub/cs131/blob/main/ws4/.bashrc#L18
+
+if [ -n "$2" ]; then
+
+This is an if-statement of the gofile function following the successful execution of the previous if-statement to check if the second argument is a string longer than 0 (mainly to check if a user entered a second argument). The proceeding command would display the files after the current directory, accounting for the specified depth level entered for $2.
+
+
+https://github.com/funghub/cs131/blob/main/ws4/.bashrc#L29
+
+alias ls_nice="ls -alh"
+
+This is an alias for quickly printing files as human readable from `ls` command and hidden files nicely in list format.

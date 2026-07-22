@@ -1,0 +1,67 @@
+For every extra dollar of total_bill, the tip rises about $0.09. For every extra person in size, the tip rises about $0.21.
+
+Batch [bcc072d8ccc3456a88502e2d667922b8] submitted.
+WARNING: No runtime version specified. Using the default runtime version. It is recommended to select a specific major.minor runtime version in production, as the default runtime version may change at any time.
+Using the default container image
+Waiting for container log creation
+PYSPARK_PYTHON=/opt/dataproc/conda/bin/python
+Generating /home/spark/.pip/pip.conf
+Configuring index-url as 'https://us-python.pkg.dev/artifact-registry-python-cache/virtual-python/simple/'
+JAVA_HOME=/usr/lib/jvm/temurin-17-jdk-amd64
+SPARK_EXTRA_CLASSPATH=
+:: loading settings :: file = /etc/spark/conf/ivysettings.xml
+26/07/17 23:55:22 WARN MetricsConfig: Cannot locate configuration: tried hadoop-metrics2-google-hadoop-file-system.properties,hadoop-metrics2.properties
+26/07/17 23:55:22 INFO MetricsSystemImpl: Scheduled Metric snapshot period at 10 second(s).
+26/07/17 23:55:22 INFO MetricsSystemImpl: google-hadoop-file-system metrics system started
++----------+----+------+------+---+------+----+
+|total_bill| tip|   sex|smoker|day|  time|size|
++----------+----+------+------+---+------+----+
+|     16.99|1.01|Female|    No|Sun|Dinner|   2|
+|     10.34|1.66|  Male|    No|Sun|Dinner|   3|
+|     21.01| 3.5|  Male|    No|Sun|Dinner|   3|
+|     23.68|3.31|  Male|    No|Sun|Dinner|   2|
+|     24.59|3.61|Female|    No|Sun|Dinner|   4|
++----------+----+------+------+---+------+----+
+only showing top 5 rows
+
+26/07/17 23:55:41 WARN Instrumentation: [671b3336] regParam is zero, which might cause numerical instability and overfitting.
+26/07/17 23:55:43 WARN InstanceBuilder: Failed to load implementation from:dev.ludovic.netlib.blas.VectorBLAS
++----------+----+------+------+----+------+----+-----------+------------------+
+|total_bill| tip|   sex|smoker| day|  time|size|   features|        prediction|
++----------+----+------+------+----+------+----+-----------+------------------+
+|      7.25| 1.0|Female|    No| Sat|Dinner|   1| [7.25,1.0]|1.4916130729401673|
+|      7.74|1.44|  Male|   Yes| Sat|Dinner|   2| [7.74,2.0]|1.7471307106434972|
+|      8.51|1.25|Female|    No|Thur| Lunch|   2| [8.51,2.0]|1.8175537066368839|
+|       9.6| 4.0|Female|   Yes| Sun|Dinner|   2|  [9.6,2.0]|1.9172434022638858|
+|     10.09| 2.0|Female|   Yes| Fri| Lunch|   2|[10.09,2.0]|1.9620580360778592|
+|     10.33| 2.0|Female|    No|Thur| Lunch|   2|[10.33,2.0]|1.9840080608030706|
+|     10.65| 1.5|Female|    No|Thur| Lunch|   2|[10.65,2.0]| 2.013274760436686|
+|     11.38| 2.0|Female|    No|Thur| Lunch|   2|[11.38,2.0]|2.0800394189758706|
+|     12.46| 1.5|  Male|    No| Fri|Dinner|   2|[12.46,2.0]| 2.178814530239322|
+|     12.48|2.52|Female|    No|Thur| Lunch|   2|[12.48,2.0]| 2.180643698966423|
++----------+----+------+------+----+------+----+-----------+------------------+
+only showing top 10 rows
+
+Coefficients: [0.09145843635504758,0.21070300388935664]
+Intercept: 0.6178364054767158
+
+RMSE: 0.9917585899142384
+R2: 0.47574015044898343
+Batch [bcc072d8ccc3456a88502e2d667922b8] finished.
+metadata:
+  '@type': type.googleapis.com/google.cloud.dataproc.v1.BatchOperationMetadata
+  batch: projects/lithe-bonito-499516-f9/locations/us-west2/batches/bcc072d8ccc3456a88502e2d667922b8
+  batchUuid: 603e42ff-3ddd-45d9-8e84-91362acb72e8
+  createTime: '2026-07-17T23:54:02.464310Z'
+  description: Batch
+  labels:
+    goog-dataproc-batch-id: bcc072d8ccc3456a88502e2d667922b8
+    goog-dataproc-batch-uuid: 603e42ff-3ddd-45d9-8e84-91362acb72e8
+    goog-dataproc-drz-resource-uuid: batch-603e42ff-3ddd-45d9-8e84-91362acb72e8
+    goog-dataproc-location: us-west2
+  operationType: BATCH
+  warnings:
+  - No runtime version specified. Using the default runtime version. It is recommended
+    to select a specific major.minor runtime version in production, as the default
+    runtime version may change at any time.
+name: projects/lithe-bonito-499516-f9/regions/us-west2/operations/d98c877c-8176-378b-b027-6036881c0f9f

@@ -1,4 +1,4 @@
-For every extra dollar of total_bill, the tip rises about $0.09. For every extra person in size, the tip rises about $0.21.
+B2: For every extra dollar of total_bill, the tip rises about $0.09. For every extra person in size, the tip rises about $0.21.
 
 Batch [bcc072d8ccc3456a88502e2d667922b8] submitted.
 WARNING: No runtime version specified. Using the default runtime version. It is recommended to select a specific major.minor runtime version in production, as the default runtime version may change at any time.

@@ -1,0 +1,74 @@
+T1:
+mkdir moo-fingerprint && cd moo-fingerprint
+
+T2:
+echo 'import socket, platform, cowsay
+
+text = f"Hostname:       {socket.gethostname()}\nPython version: {platform.python_version()}\nCowsay version:  {cowsay.__version__}"
+
+cowsay.cow(text)' > say2.py
+
+
+T3:
+echo "cowsay==6.1" > requirements.txt
+
+T4:
+echo 'FROM python:3.10-slim
+
+WORKDIR /app
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY say.py .
+
+CMD ["python","say.py"]' > Dockerfile
+
+
+T5:
+docker build -t moo:v1 .
+docker run --rm moo:v1
+
+T6:
+docker tag moo:v1 lawrencefung/moo:v1
+docker push lawrencefung/moo:v1
+
+T7:
+docker pull lawrencefung/moo:v1
+docker run --rm lawrencefung/moo:v1
+
+T8:
+
+on DGX
+  ____________________________
+ /                            \
+| Hostname:       cf5ed9ec0255 |
+| Python version: 3.10.20      |
+| Cowsay version:  6.1         |
+ \                            /
+  ============================
+                            \
+                             \
+                               ^__^
+                               (oo)\_______
+                               (__)\       )\/\
+                                   ||----w |
+                                   ||     ||
+
+on GCP
+  ____________________________
+ /                            \
+| Hostname:       ef15d8d1a17e |
+| Python version: 3.10.20      |
+| Cowsay version:  6.1         |
+ \                            /
+  ============================
+                            \
+                             \
+                               ^__^
+                               (oo)\_______
+                               (__)\       )\/\
+                                   ||----w |
+                                   ||     ||
+
+Hostname is the only line different. Python and Cowsay versions are both identical.
